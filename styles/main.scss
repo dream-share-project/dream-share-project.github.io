@@ -1,0 +1,989 @@
+@import './base/reset';
+@import './base/mixins';
+@import url(./fonts/fonts.css);
+
+
+/*Desktop Portrait*/
+.header{
+    @include size (1440px, 700px);
+    position: relative;
+    margin: 0 auto;
+    background-color: #000000;
+    background-image: url(../images/Bitmap-min.png);
+    &__logo{
+        position: absolute;
+        top: 48px;
+        left: 248px;
+        &__link{
+            @include font ('Montserrat', 20px, 700, #FFF);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+    &__buttons{
+        display: flex;
+        position: absolute;
+        top: 40px;
+        right: 291px;
+        &__log-in{
+            @include size (80px, 36px);
+            @include font ('Montserrat', 14px, 400, #FFF);
+            line-height: 36px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 40px;
+            transition-duration: 0.2s;
+            &:hover{
+                background-color: #FF4E50;
+            }
+        }
+        &__sign-up{
+            @extend .header__buttons__log-in;
+            @include size (90px, 36px);
+            border: 2px solid #FFF;
+        }
+    }
+    &__description{
+        @include size (470px, 252.5px);
+        position: absolute;
+        top: 223.5px;
+        left: 485px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__title{
+            @include font ('Montserrat', 52px, 700, #FFF);
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 63px;
+        }
+        &__text{
+            @include font ('Roboto', 24px, 300, #F7F3F2);
+            text-align: center;
+            padding-bottom: 5px;
+        }
+        &__button{
+            @include size (225px, 40px);
+            margin: 0 auto;
+            border-radius: 40px;
+            background-color: #FF4E50;
+            @include font ('Montserrat', 14px, 700, #FFF);
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            padding: 1px 0 0 2px;
+            &:hover{
+                background-color: #FFF;
+                color: #FF4E50;
+                outline: 2px solid #FF4E50;
+            }
+        }
+    }
+}
+
+.main{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.how-works{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include size (940px, 461px);
+    margin: 95px auto 0;
+    &__title{
+        @include font ('Montserrat', 26px, 700, #444);
+        text-align: center;
+        line-height: 20px;
+    }
+    &__description{
+        @include size (940px, 400px);
+        display: flex;
+        justify-content: space-between;
+        &__step1{
+            @include size (300px, 400px);
+            position: relative;
+            border-radius: 4px;
+            background-image: url(../images/Laptop-min.png);
+            box-shadow: inset 0 0 0 150px rgba(0, 0, 0, 0.2);
+            &__mark{
+                @include size (70px, 20px);
+                border-radius: 40px;
+                background-color: #FF4E50;
+                position: absolute;
+                bottom: 161px;
+                left: 25px;
+                @include font ('Montserrat', 10px, 400, #FFF);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 7px 0 0 2px;
+            }
+            &__title{
+                @include font ('Montserrat', 24px, 700, #FFF);
+                line-height: 26px;
+                position: absolute;
+                bottom: 88px;
+                left: 25px;
+            }
+            &__text{
+                @include size (250px, 57px);
+                @include font ('Roboto', 14px, 300, #E3E3E3);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                line-height: 14px;
+                position: absolute;
+                bottom: 21px;
+                left: 25px;
+            }
+        }
+        &__step2{
+            @extend .how-works__description__step1;
+            background-image: url(../images/Car-min.png);
+            &__mark{
+                @extend .how-works__description__step1__mark;
+                bottom: 130px;
+            }
+            &__title{
+                @extend .how-works__description__step1__title;
+                bottom: 80px;
+            }
+            &__text{
+                @extend .how-works__description__step1__text;
+            }
+        }
+        &__step3{
+            @extend .how-works__description__step1;
+            background-image: url(../images/Beach-min.png);
+            &__mark{
+                @extend .how-works__description__step1__mark;
+            }
+            &__title{
+                @extend .how-works__description__step1__title;
+            }
+            &__text{
+                @extend .how-works__description__step1__text;
+            }
+        }
+    }
+}
+
+.partners{
+    @extend .how-works;
+    @include size (941px, 361px);
+    &__title{
+        @extend .how-works__title;
+        padding-left: 2px;
+    }
+    &__person-block{
+        @include size (941px, 224px);
+        display: flex;
+        justify-content: space-between;
+        &__person1{
+            @include size (221px, 205px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 1px;
+            &__face{
+                @include size (120px, 120px);
+                border-radius: 50%;
+                background-image: url(../images/face1-min.png);
+                margin: 0 auto;
+                position: relative;
+                &__icon{
+                    @include size (32px, 32px);
+                    background-color: #FF4E50;
+                    background-image: url(../images/music2.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: absolute;
+                    border-radius: 50%;
+                    bottom: 0;
+                    right: 0;
+                    outline: 4px solid #FFF;
+                }
+            }
+            &__title{
+                @include font ('Montserrat', 14px, 700, #444);
+                text-align: center;
+                padding-top: 10px;
+            }
+            &__text{
+                @include size (221px, 38px);
+                display: flex;
+                flex-direction: column;
+                @include font ('Roboto', 14px, 300, #666);
+                text-align: center;
+                line-height: 14px;
+                padding-top: 13px;
+            }
+        }
+        &__person2{
+            @extend .partners__person-block__person1;
+            &__face{
+                @extend .partners__person-block__person1__face;
+                background-image: url(../images/face2-min.png);
+                &__icon{
+                    @extend .partners__person-block__person1__face__icon;
+                    background-color: #19D4CA;
+                    background-image: url(../images/brush.svg);
+                }
+            }
+            &__title{
+                @extend .partners__person-block__person1__title;
+            }
+            &__text{
+                @extend .partners__person-block__person1__text;
+            }
+        }
+        &__person3{
+            @extend .partners__person-block__person1;
+            @include size (221px, 224px);
+            &__face{
+                @extend .partners__person-block__person1__face;
+                background-image: url(../images/face3-min.png);
+                &__icon{
+                    @extend .partners__person-block__person1__face__icon;
+                    background-color: #FFA710;
+                    background-image: url(../images/camera.svg);
+                }
+            }
+            &__title{
+                @extend .partners__person-block__person1__title;
+            }
+            &__text{
+                @extend .partners__person-block__person1__text;
+                @include size (221px, 57px);
+                padding-top: 18px;
+            }
+        }
+        &__person4{
+            @extend .partners__person-block__person3;
+            &__face{
+                @extend .partners__person-block__person1__face;
+                background-image: url(../images/face4-min.png);
+                &__icon{
+                    @extend .partners__person-block__person1__face__icon;
+                    background-color: #667DF3;
+                    background-image: url(../images/airplane.svg);
+                }
+            }
+            &__title{
+                @extend .partners__person-block__person1__title;
+            }
+            &__text{
+                @extend .partners__person-block__person3__text;
+            }
+        }
+    }
+    &__button{
+        @include size (180px, 40px);
+        border-radius: 40px;
+        border: 2px solid #FF4E50;
+        background-color: #FFF;
+        margin: 0 auto;
+        @include font ('Montserrat', 14px, 700, #FF4E50);
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        padding: 0 0 8px 8px;
+        &:hover{
+            background-color: #FF4E50;
+            color: #FFF;
+        }
+    }
+}
+
+.activities{
+    @extend .how-works;
+    @include size (940px, 1031px);
+    &__title{
+        @extend .partners__title;
+    }
+    &__block{
+        @include size (940px, 970px);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__sports{
+            @include size (300px, 310px);
+            border-radius: 4px;
+            background-image: url(../images/sports-min.png);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: inset 0 0 100px 150px rgba(0, 0, 0, 0.2);
+            &__description{
+                @include font ('Montserrat', 22px, 700, #FFF);
+            }
+        }
+        &__health{
+            @extend .activities__block__sports;
+            background-image: url(../images/health-min.png);
+            &__description{
+                @extend .activities__block__sports__description;
+            }
+        }
+        &__extreme{
+            @extend .activities__block__sports;
+            background-image: url(../images/extreme-min.png);
+            &__description{
+                @extend .activities__block__sports__description;
+                @include size (187px, 54px);
+                text-align: center;
+                line-height: 28px;
+            }
+        }
+        &__games{
+            @extend .activities__block__sports;
+            background-image: url(../images/games-min.png);
+            &__description{
+                @extend .activities__block__sports__description;
+            }
+        }
+        &__culture{
+            @extend .activities__block__sports;
+            @include size (620px, 310px);
+            background-image: url(../images/culture-min.png);
+            &__description{
+                @extend .activities__block__sports__description;
+            }
+        }
+        &__relax{
+            @extend .activities__block__culture;
+            background-image: url(../images/relax-min.png);
+            &__description{
+                @extend .activities__block__sports__description;
+            }
+        }
+        &__travelling{
+            @extend .activities__block__sports;
+            background-image: url(../images/trevelling-min.png);
+            &__description{
+                @extend .activities__block__sports__description;
+            }
+        }
+    }
+}
+
+.search{
+    @extend .how-works;
+    @include size (482px, 158px);
+    &__title{
+        @extend .how-works__title;
+    }
+    &__text{
+        @include size (415px, 24px);
+        @include font ('Roboto', 18px, 300, #666);
+        margin: 23px auto 0;
+        padding-left: 2px;
+        text-align: center;
+        line-height: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &__form{
+        @include size (482px, 40px);
+        display: flex;
+        justify-content: space-between;
+        &__input{
+            @include size (299px, 40px);
+            border-radius: 3px;
+            border: 1px solid #D4D4D4;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
+            @include font ('Roboto', 14px, 300, #999);
+            padding: 4px 0 0 14px;
+        }
+        &__button{
+            @include size (172.125px, 40px);
+            border-radius: 40px;
+            background-color: #FF4E50;
+            border: none;
+            @include font ('Montserrat', 14px, 700, #FFF);
+            cursor: pointer;
+            &:hover{
+                box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.6);
+            }
+            &:active{
+                box-shadow: none;
+                background-color: #FFF;
+                color: #FF4E50;
+                border: 2px solid #FF4E50;
+            }
+        }
+    }
+}
+
+.footer{
+    @include size (1440px, 224px);
+    margin: 100px auto 0;
+    position: relative;
+    border-top: 2px solid #FF4E50;
+    &__title{
+        @include font ('Montserrat', 16px, 400, #FF4E50);
+        text-transform: uppercase;
+        position: absolute;
+        top: 39px;
+        left: 250px;
+    }
+    &__company{
+        @include font ('Montserrat', 14px, 700, #444);
+        position: absolute;
+        top: 40px;
+        left: 490px;
+        text-decoration: none;
+    }
+    &__links{
+        @include size (114px, 156px);
+        position: absolute;
+        top: 68px;
+        left: 490px;
+        display: flex;
+        flex-direction: column;
+        &__about{
+            width: 38px;
+            @include font ('Roboto', 14px, 300, #999);
+            line-height: 26px;
+            text-decoration: none;
+            &:hover{
+                color: #000000;
+            }
+        }
+        &__contact{
+            @extend .footer__links__about;
+            width: 48px;
+        }
+        &__press{
+            @extend .footer__links__about;
+            width: 35px;
+        }
+        &__blog{
+            @extend .footer__links__about;
+            width: 27px;
+        }
+        &__terms{
+            @extend .footer__links__about;
+            width: 114px;
+        }
+        &__help{
+            @extend .footer__links__about;
+            width: 28px;
+        }
+    }
+    &__partners{
+        @extend .footer__company;
+        left: 729px;
+    }
+    &__designed-by{
+        @include font ('Montserrat', 10px, 700, #CCC);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 40px;
+        right: 247px;
+    }
+    &__image{
+        @include size (110px, 24px);
+        background-image: url(../images/areto-min.png);
+        position: absolute;
+        top: 57px;
+        right: 250px;
+    }
+}
+
+
+/*Table Portrait*/
+@media screen and (max-width: 1440px) and (min-width: 768px){
+    .header{
+        @include size (768px, 700px);
+        background-position: center;
+        &__logo{
+            top: 48px;
+            left: 48px;
+        }
+        &__buttons{
+            right: 50px;
+        }
+        &__description{
+            left: 149px;
+        }
+    }
+    
+    .main{
+        width: 768px;
+    }
+    
+    .how-works{
+        @include size (748px, 461px);
+        &__title{
+            @include font ('Montserrat', 22px, 700, #444);
+            line-height: 24px;
+        }
+        &__description{
+            @include size (748px, 400px);
+            &__step1{
+                @include size (236px, 400px);
+                &__mark{
+                    bottom: 175px;
+                    left: 20px;
+                }
+                &__title{
+                    line-height: 14px;
+                    bottom: 102px;
+                    left: 20px;
+                }
+                &__text{
+                    @include size (196px, 76px);
+                    line-height: 14px;
+                    bottom: 15px;
+                    left: 20px;
+                }
+            }
+            &__step2{
+                &__mark{
+                    bottom: 125px;
+                }
+                &__title{
+                    @include size (196px, 29px);
+                    bottom: 80px;
+                }
+            }
+        }
+    }
+    
+    .partners{
+        @include size (492px, 605px);
+        &__person-block{
+            @include size (492px, 464px);
+            flex-direction: column;
+            flex-wrap: wrap;
+            &__person1{
+                @include size (236px, 205px);
+                margin-right: 20px;
+                &__title{
+                    padding-top: 6px;
+                }
+                &__text{
+                    @include size (236px, 38px);
+                    padding-top: 10px;
+                }
+            }
+            &__person3{
+                @include size (236px, 224px);
+                &__text{
+                    @include size (236px, 57px);
+                    padding-top: 15px;
+                }
+            }
+            &__person4{
+                @include size (236px, 205px);
+                &__text{
+                    @include size (236px, 38px);
+                    padding-top: 10px;
+                }
+            }
+        }
+        &__button{
+            padding: 0 0 8px 6px;
+        }
+    }
+    
+    .activities{
+        @include size (748px, 1031px);
+        &__block{
+            @include size (748px, 970px);
+            &__sports{
+                @include size (236px, 310px);
+                background-position: center;
+                &__description{
+                    @include size (206px, 54px);
+                    text-align: center;
+                    line-height: 26px;
+                    margin-bottom: 22px;
+                }
+            }
+            &__health{
+                &__description{
+                    margin-bottom: 0;
+                }
+            }
+            &__extreme{
+                &__description{
+                    margin-bottom: 0;
+                    line-height: 27px;
+                }
+            }
+            &__games{
+                &__description{
+                    @include size (206px, 27px);
+                    margin-bottom: 0;
+                }
+            }
+            &__culture{
+                @include size (492px, 310px);
+                &__description{
+                    @include size (261px, 27px);
+                    margin-bottom: 0;
+                }
+            }
+            &__relax{
+                &__description{
+                    @include size (277px, 27px);
+                    margin-bottom: 0;
+                }
+            }
+            &__travelling{
+                background-position: left;
+                &__description{
+                    @include size (206px, 27px);
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+    .search{
+        @include size (482px, 158px);
+        &__title{
+            padding-left: 2px;
+        }
+        &__text{
+            padding: 0 0 2px 4px;
+        }
+        &__form{
+            &__button{
+                padding-left: 10px;
+            }
+        }
+    }
+    
+    .footer{
+        @include size (768px, 224px);
+        &__title{
+            left: 39px;
+        }
+        &__company{
+            left: 266px;
+        }
+        &__links{
+            left: 266px;
+        }
+        &__partners{
+            left: 436px;
+        }
+        &__designed-by{
+            right: 37px;
+        }
+        &__image{
+            right: 40px;
+        }
+    }
+}
+
+
+/*Mobile Portrait*/
+@media screen and (max-width: 768px) and (min-width: 320px){
+    .header{
+        @include size (320px, 540px);
+        background-image: url(../images/mobile/Bitmap-min.png);
+        border-left: 10px solid #FFF;
+        &__logo{
+            top: 155px;
+            left: 86px;
+        }
+        &__buttons{
+            top: 20px;
+            right: 83px;
+        }
+        &__description{
+            @include size (272px, 183.5px);
+            top: 203.5px;
+            left: 24px;
+            &__title{
+                @include font ('Montserrat', 30px, 700, #FFF);
+                line-height: normal;
+            }
+            &__text{
+                @include font ('Roboto', 18px, 300, #F7F3F2);
+                text-align: center;
+                line-height: 24.5px;
+                padding-bottom: 8px;
+            }
+            &__button{
+                @include size (280px, 40px);
+                padding: 1px 4px 0 0;
+            }
+        }
+    }
+
+    .main{
+        width: 320px;
+    }
+    
+    .how-works{
+        @include size (300px, 781px);
+        margin: 36px auto 0;
+        &__title{
+            @include font ('Montserrat', 22px, 700, #444);
+            line-height: 24px;
+        }
+        &__description{
+            @include size (300px, 740px);
+            flex-direction: column;
+            &__step1{
+                @include size (300px, 240px);
+                background-image: url(../images/mobile/laptop-min.png);
+                &__mark{
+                    bottom: 156px;
+                    left: 20px;
+                }
+                &__title{
+                    line-height: 14px;
+                    bottom: 83px;
+                    left: 20px;
+                }
+                &__text{
+                    @include size (250px, 57px);
+                    line-height: 14px;
+                    bottom: 16px;
+                    left: 20px;
+                }
+            }
+            &__step2{
+                background-image: url(../images/mobile/car-min.png);
+                &__mark{
+                    bottom: 125px;
+                }
+                &__title{
+                    @include size (250px, 29px);
+                    bottom: 66px;
+                }
+            }
+            &__step3{
+                background-image: url(../images/mobile/beach-min.png);
+            }
+        }
+    }
+    
+    .partners{
+        @include size (300px, 1031px);
+        &__title{
+            line-height: normal;
+        }
+        &__person-block{
+            @include size (236px, 887px);
+            margin: -24px auto 0;
+            flex-direction: column;
+            justify-content: start;
+            &__person1{
+                @include size (236px, 205px);
+                margin-bottom: 16px;
+                &__title{
+                    padding-top: 6px;
+                }
+                &__text{
+                    @include size (236px, 38px);
+                    padding-top: 11px;
+                }
+            }
+            &__person2{
+                @include size (236px, 224px);
+                position: relative;
+                &__face{
+                    background-image: url(../images/face3-min.png);
+                    &__icon{
+                        background-color: #FFA710;
+                        background-image: url(../images/camera.svg);
+                    }
+                }
+                &__title{
+                    visibility: hidden;
+                    &::before{
+                        content: 'Diana Wells';
+                        visibility: visible;
+                        position: absolute;
+                        top: 140px;
+                        left: 75px;
+                    }
+                }
+                &__text{
+                    visibility: hidden;
+                    &::before{
+                        content: 'Living in Athens, Greece. I love black and white classics, chillout music and green tea.';
+                        visibility: visible;
+                        position: absolute;
+                        bottom: 0px;
+                    }
+                }
+            }
+            &__person3{
+                position: relative;
+                &__face{
+                    background-image: url(../images/face2-min.png);
+                    &__icon{
+                        background-color: #19D4CA;
+                        background-image: url(../images/brush.svg);
+                    }
+                }
+                &__title{
+                    visibility: hidden;
+                    &::before{
+                        content: 'Marie Bennett';
+                        visibility: visible;
+                        position: absolute;
+                        left: 66px;
+                    }
+                }
+                &__text{
+                    visibility: hidden;
+                    &::before{
+                        content: 'Currently living in Colorado. Lover of art, languages and travelling.';
+                        visibility: visible;
+                    }
+                }
+            }
+            &__person4{
+                margin-bottom: 0;
+                &__text{
+                    visibility: visible;
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__button{
+            @include size (280px, 40px);
+            padding: 0 0 8px 6px;
+        }
+    }
+    
+    .activities{
+        @include size (300px, 987px);
+        &__title{
+            @include size (280px, 54px);
+            margin: 0 auto;
+        }
+        &__block{
+            @include size (300px, 900px);
+            flex-direction: column;
+            justify-content: start;
+            &__sports{
+                @include size (300px, 120px);
+                background-image: url(../images/mobile/sports-min.png);
+                margin-bottom: 10px;
+                &__description{
+                    @include size (206px, 54px);
+                    text-align: center;
+                    line-height: 26px;
+                    margin-bottom: 26px;
+                }
+            }
+            &__health{
+                background-image: url(../images/mobile/health-min.png);
+                &__description{
+                    margin-bottom: 0;
+                }
+            }
+            &__extreme{
+                background-image: url(../images/mobile/extreme-min.png);
+                &__description{
+                    @include size (206px, 54px);
+                    margin-bottom: 0;
+                }
+            }
+            &__games{
+                background-image: url(../images/mobile/games-min.png);
+                &__description{
+                    margin-top: 26px;
+                    margin-bottom: 0;
+                }
+            }
+            &__culture{
+                @include size (300px, 120px);
+                background-image: url(../images/mobile/culture-min.png);
+                &__description{
+                    @include size (261px, 27px);
+                    margin-bottom: 0;
+                }
+            }
+            &__relax{
+                background-image: url(../images/mobile/relax-min.png);
+                &__description{
+                    @include size (277px, 27px);
+                    margin-bottom: 0;
+                }
+            }
+            &__travelling{
+                margin-bottom: 0;
+                background-image: url(../images/mobile/trevelling-min.png);
+                &__description{
+                    margin-top: 26px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .search{
+        @include size (280px, 192px);
+        &__title{
+            padding-left: 0;
+        }
+        &__text{
+            @include size (280px, 24px);
+            margin: 0 auto;
+            padding: 0 0 2px 4px;
+        }
+        &__form{
+            @include size (280px, 90px);
+            margin-bottom: 2px;
+            flex-direction: column;
+            &__input{
+                @include size (280px, 40px);
+            }
+            &__button{
+                @include size (280px, 40px);
+                padding: 0 0 0 10px;
+            }
+        }
+    }
+
+    .footer{
+        @include size (320px, 226px);
+        margin: 38px auto 0;
+        &__title{
+            top: 21px;
+            left: 101px;
+        }
+        &__company{
+            top: 54px;
+            left: 125px;
+        }
+        &__links{
+            @include size (190px, 52px);
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            top: 72px;
+            left: 65px;
+        }
+        &__partners{
+            top: 130px;
+            left: 127.5px;
+        }
+        &__designed-by{
+            top: 161px;
+            right: 117px;
+        }
+        &__image{
+            top: 178px;
+            right: 105px;
+        }
+    }
+}

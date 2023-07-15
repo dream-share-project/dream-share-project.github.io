@@ -1,0 +1,1084 @@
+@import url(./fonts/fonts.css);
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Desktop Portrait*/
+.header {
+  width: 1440px;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #000000;
+  background-image: url(../images/Bitmap-min.png);
+}
+.header__logo {
+  position: absolute;
+  top: 48px;
+  left: 248px;
+}
+.header__logo__link {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header__buttons {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  right: 291px;
+}
+.header__buttons__log-in, .header__buttons__sign-up {
+  width: 80px;
+  height: 36px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+  line-height: 36px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 40px;
+  transition-duration: 0.2s;
+}
+.header__buttons__log-in:hover, .header__buttons__sign-up:hover {
+  background-color: #FF4E50;
+}
+.header__buttons__sign-up {
+  width: 90px;
+  height: 36px;
+  border: 2px solid #FFF;
+}
+.header__description {
+  width: 470px;
+  height: 252.5px;
+  position: absolute;
+  top: 223.5px;
+  left: 485px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header__description__title {
+  font-family: "Montserrat";
+  font-size: 52px;
+  font-weight: 700;
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 63px;
+}
+.header__description__text {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 300;
+  color: #F7F3F2;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.header__description__button {
+  width: 225px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 40px;
+  background-color: #FF4E50;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFF;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  padding: 1px 0 0 2px;
+}
+.header__description__button:hover {
+  background-color: #FFF;
+  color: #FF4E50;
+  outline: 2px solid #FF4E50;
+}
+
+.main {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.how-works, .search, .activities, .partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 940px;
+  height: 461px;
+  margin: 95px auto 0;
+}
+.how-works__title, .search__title, .partners__title, .activities__title {
+  font-family: "Montserrat";
+  font-size: 26px;
+  font-weight: 700;
+  color: #444;
+  text-align: center;
+  line-height: 20px;
+}
+.how-works__description {
+  width: 940px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.how-works__description__step1, .how-works__description__step3, .how-works__description__step2 {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  border-radius: 4px;
+  background-image: url(../images/Laptop-min.png);
+  box-shadow: inset 0 0 0 150px rgba(0, 0, 0, 0.2);
+}
+.how-works__description__step1__mark, .how-works__description__step3__mark, .how-works__description__step2__mark {
+  width: 70px;
+  height: 20px;
+  border-radius: 40px;
+  background-color: #FF4E50;
+  position: absolute;
+  bottom: 161px;
+  left: 25px;
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-weight: 400;
+  color: #FFF;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px 0 0 2px;
+}
+.how-works__description__step1__title, .how-works__description__step3__title, .how-works__description__step2__title {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFF;
+  line-height: 26px;
+  position: absolute;
+  bottom: 88px;
+  left: 25px;
+}
+.how-works__description__step1__text, .how-works__description__step3__text, .how-works__description__step2__text {
+  width: 250px;
+  height: 57px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  color: #E3E3E3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  line-height: 14px;
+  position: absolute;
+  bottom: 21px;
+  left: 25px;
+}
+.how-works__description__step2 {
+  background-image: url(../images/Car-min.png);
+}
+.how-works__description__step2__mark {
+  bottom: 130px;
+}
+.how-works__description__step2__title {
+  bottom: 80px;
+}
+.how-works__description__step3 {
+  background-image: url(../images/Beach-min.png);
+}
+.partners {
+  width: 941px;
+  height: 361px;
+}
+.partners__title, .activities__title {
+  padding-left: 2px;
+}
+.partners__person-block {
+  width: 941px;
+  height: 224px;
+  display: flex;
+  justify-content: space-between;
+}
+.partners__person-block__person1, .partners__person-block__person3, .partners__person-block__person4, .partners__person-block__person2 {
+  width: 221px;
+  height: 205px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1px;
+}
+.partners__person-block__person1__face, .partners__person-block__person4__face, .partners__person-block__person3__face, .partners__person-block__person2__face {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: url(../images/face1-min.png);
+  margin: 0 auto;
+  position: relative;
+}
+.partners__person-block__person1__face__icon, .partners__person-block__person4__face__icon, .partners__person-block__person3__face__icon, .partners__person-block__person2__face__icon {
+  width: 32px;
+  height: 32px;
+  background-color: #FF4E50;
+  background-image: url(../images/music2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  outline: 4px solid #FFF;
+}
+.partners__person-block__person1__title, .partners__person-block__person4__title, .partners__person-block__person3__title, .partners__person-block__person2__title {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+  text-align: center;
+  padding-top: 10px;
+}
+.partners__person-block__person1__text, .partners__person-block__person3__text, .partners__person-block__person4__text, .partners__person-block__person2__text {
+  width: 221px;
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+  text-align: center;
+  line-height: 14px;
+  padding-top: 13px;
+}
+.partners__person-block__person2__face {
+  background-image: url(../images/face2-min.png);
+}
+.partners__person-block__person2__face__icon {
+  background-color: #19D4CA;
+  background-image: url(../images/brush.svg);
+}
+.partners__person-block__person3, .partners__person-block__person4 {
+  width: 221px;
+  height: 224px;
+}
+.partners__person-block__person3__face {
+  background-image: url(../images/face3-min.png);
+}
+.partners__person-block__person3__face__icon {
+  background-color: #FFA710;
+  background-image: url(../images/camera.svg);
+}
+.partners__person-block__person3__text, .partners__person-block__person4__text {
+  width: 221px;
+  height: 57px;
+  padding-top: 18px;
+}
+.partners__person-block__person4__face {
+  background-image: url(../images/face4-min.png);
+}
+.partners__person-block__person4__face__icon {
+  background-color: #667DF3;
+  background-image: url(../images/airplane.svg);
+}
+.partners__button {
+  width: 180px;
+  height: 40px;
+  border-radius: 40px;
+  border: 2px solid #FF4E50;
+  background-color: #FFF;
+  margin: 0 auto;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  color: #FF4E50;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  padding: 0 0 8px 8px;
+}
+.partners__button:hover {
+  background-color: #FF4E50;
+  color: #FFF;
+}
+
+.activities {
+  width: 940px;
+  height: 1031px;
+}
+.activities__block {
+  width: 940px;
+  height: 970px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.activities__block__sports, .activities__block__travelling, .activities__block__culture, .activities__block__relax, .activities__block__games, .activities__block__extreme, .activities__block__health {
+  width: 300px;
+  height: 310px;
+  border-radius: 4px;
+  background-image: url(../images/sports-min.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 100px 150px rgba(0, 0, 0, 0.2);
+}
+.activities__block__sports__description, .activities__block__travelling__description, .activities__block__relax__description, .activities__block__culture__description, .activities__block__games__description, .activities__block__extreme__description, .activities__block__health__description {
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFF;
+}
+.activities__block__health {
+  background-image: url(../images/health-min.png);
+}
+.activities__block__extreme {
+  background-image: url(../images/extreme-min.png);
+}
+.activities__block__extreme__description {
+  width: 187px;
+  height: 54px;
+  text-align: center;
+  line-height: 28px;
+}
+.activities__block__games {
+  background-image: url(../images/games-min.png);
+}
+.activities__block__culture, .activities__block__relax {
+  width: 620px;
+  height: 310px;
+  background-image: url(../images/culture-min.png);
+}
+.activities__block__relax {
+  background-image: url(../images/relax-min.png);
+}
+.activities__block__travelling {
+  background-image: url(../images/trevelling-min.png);
+}
+.search {
+  width: 482px;
+  height: 158px;
+}
+.search__text {
+  width: 415px;
+  height: 24px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 300;
+  color: #666;
+  margin: 23px auto 0;
+  padding-left: 2px;
+  text-align: center;
+  line-height: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.search__form {
+  width: 482px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.search__form__input {
+  width: 299px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #D4D4D4;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
+  padding: 4px 0 0 14px;
+}
+.search__form__button {
+  width: 172.125px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #FF4E50;
+  border: none;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFF;
+  cursor: pointer;
+}
+.search__form__button:hover {
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.6);
+}
+.search__form__button:active {
+  box-shadow: none;
+  background-color: #FFF;
+  color: #FF4E50;
+  border: 2px solid #FF4E50;
+}
+
+.footer {
+  width: 1440px;
+  height: 224px;
+  margin: 100px auto 0;
+  position: relative;
+  border-top: 2px solid #FF4E50;
+}
+.footer__title {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  color: #FF4E50;
+  text-transform: uppercase;
+  position: absolute;
+  top: 39px;
+  left: 250px;
+}
+.footer__company, .footer__partners {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+  position: absolute;
+  top: 40px;
+  left: 490px;
+  text-decoration: none;
+}
+.footer__links {
+  width: 114px;
+  height: 156px;
+  position: absolute;
+  top: 68px;
+  left: 490px;
+  display: flex;
+  flex-direction: column;
+}
+.footer__links__about, .footer__links__help, .footer__links__terms, .footer__links__blog, .footer__links__press, .footer__links__contact {
+  width: 38px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  color: #999;
+  line-height: 26px;
+  text-decoration: none;
+}
+.footer__links__about:hover, .footer__links__help:hover, .footer__links__terms:hover, .footer__links__blog:hover, .footer__links__press:hover, .footer__links__contact:hover {
+  color: #000000;
+}
+.footer__links__contact {
+  width: 48px;
+}
+.footer__links__press {
+  width: 35px;
+}
+.footer__links__blog {
+  width: 27px;
+}
+.footer__links__terms {
+  width: 114px;
+}
+.footer__links__help {
+  width: 28px;
+}
+.footer__partners {
+  left: 729px;
+}
+.footer__designed-by {
+  font-family: "Montserrat";
+  font-size: 10px;
+  font-weight: 700;
+  color: #CCC;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40px;
+  right: 247px;
+}
+.footer__image {
+  width: 110px;
+  height: 24px;
+  background-image: url(../images/areto-min.png);
+  position: absolute;
+  top: 57px;
+  right: 250px;
+}
+
+/*Table Portrait*/
+@media screen and (max-width: 1440px) and (min-width: 768px) {
+  .header {
+    width: 768px;
+    height: 700px;
+    background-position: center;
+  }
+  .header__logo {
+    top: 48px;
+    left: 48px;
+  }
+  .header__buttons {
+    right: 50px;
+  }
+  .header__description {
+    left: 149px;
+  }
+  .main {
+    width: 768px;
+  }
+  .how-works, .partners, .activities, .search {
+    width: 748px;
+    height: 461px;
+  }
+  .how-works__title, .partners__title, .activities__title, .search__title {
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 700;
+    color: #444;
+    line-height: 24px;
+  }
+  .how-works__description {
+    width: 748px;
+    height: 400px;
+  }
+  .how-works__description__step1, .how-works__description__step2, .how-works__description__step3 {
+    width: 236px;
+    height: 400px;
+  }
+  .how-works__description__step1__mark, .how-works__description__step2__mark, .how-works__description__step3__mark {
+    bottom: 175px;
+    left: 20px;
+  }
+  .how-works__description__step1__title, .how-works__description__step2__title, .how-works__description__step3__title {
+    line-height: 14px;
+    bottom: 102px;
+    left: 20px;
+  }
+  .how-works__description__step1__text, .how-works__description__step2__text, .how-works__description__step3__text {
+    width: 196px;
+    height: 76px;
+    line-height: 14px;
+    bottom: 15px;
+    left: 20px;
+  }
+  .how-works__description__step2__mark {
+    bottom: 125px;
+  }
+  .how-works__description__step2__title {
+    width: 196px;
+    height: 29px;
+    bottom: 80px;
+  }
+  .partners {
+    width: 492px;
+    height: 605px;
+  }
+  .partners__person-block {
+    width: 492px;
+    height: 464px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .partners__person-block__person1, .partners__person-block__person2, .partners__person-block__person3, .partners__person-block__person4 {
+    width: 236px;
+    height: 205px;
+    margin-right: 20px;
+  }
+  .partners__person-block__person1__title, .partners__person-block__person2__title, .partners__person-block__person3__title, .partners__person-block__person4__title {
+    padding-top: 6px;
+  }
+  .partners__person-block__person1__text, .partners__person-block__person2__text, .partners__person-block__person3__text, .partners__person-block__person4__text {
+    width: 236px;
+    height: 38px;
+    padding-top: 10px;
+  }
+  .partners__person-block__person3, .partners__person-block__person4 {
+    width: 236px;
+    height: 224px;
+  }
+  .partners__person-block__person3__text, .partners__person-block__person4__text {
+    width: 236px;
+    height: 57px;
+    padding-top: 15px;
+  }
+  .partners__person-block__person4 {
+    width: 236px;
+    height: 205px;
+  }
+  .partners__person-block__person4__text {
+    width: 236px;
+    height: 38px;
+    padding-top: 10px;
+  }
+  .partners__button {
+    padding: 0 0 8px 6px;
+  }
+  .activities {
+    width: 748px;
+    height: 1031px;
+  }
+  .activities__block {
+    width: 748px;
+    height: 970px;
+  }
+  .activities__block__sports, .activities__block__health, .activities__block__extreme, .activities__block__games, .activities__block__culture, .activities__block__relax, .activities__block__travelling {
+    width: 236px;
+    height: 310px;
+    background-position: center;
+  }
+  .activities__block__sports__description, .activities__block__health__description, .activities__block__extreme__description, .activities__block__games__description, .activities__block__culture__description, .activities__block__relax__description, .activities__block__travelling__description {
+    width: 206px;
+    height: 54px;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 22px;
+  }
+  .activities__block__health__description {
+    margin-bottom: 0;
+  }
+  .activities__block__extreme__description {
+    margin-bottom: 0;
+    line-height: 27px;
+  }
+  .activities__block__games__description {
+    width: 206px;
+    height: 27px;
+    margin-bottom: 0;
+  }
+  .activities__block__culture, .activities__block__relax {
+    width: 492px;
+    height: 310px;
+  }
+  .activities__block__culture__description {
+    width: 261px;
+    height: 27px;
+    margin-bottom: 0;
+  }
+  .activities__block__relax__description {
+    width: 277px;
+    height: 27px;
+    margin-bottom: 0;
+  }
+  .activities__block__travelling {
+    background-position: left;
+  }
+  .activities__block__travelling__description {
+    width: 206px;
+    height: 27px;
+    margin-bottom: 0;
+  }
+  .search {
+    width: 482px;
+    height: 158px;
+  }
+  .search__title {
+    padding-left: 2px;
+  }
+  .search__text {
+    padding: 0 0 2px 4px;
+  }
+  .search__form__button {
+    padding-left: 10px;
+  }
+  .footer {
+    width: 768px;
+    height: 224px;
+  }
+  .footer__title {
+    left: 39px;
+  }
+  .footer__company, .footer__partners {
+    left: 266px;
+  }
+  .footer__links {
+    left: 266px;
+  }
+  .footer__partners {
+    left: 436px;
+  }
+  .footer__designed-by {
+    right: 37px;
+  }
+  .footer__image {
+    right: 40px;
+  }
+}
+/*Mobile Portrait*/
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  .header {
+    width: 320px;
+    height: 540px;
+    background-image: url(../images/mobile/Bitmap-min.png);
+    border-left: 10px solid #FFF;
+  }
+  .header__logo {
+    top: 155px;
+    left: 86px;
+  }
+  .header__buttons {
+    top: 20px;
+    right: 83px;
+  }
+  .header__description {
+    width: 272px;
+    height: 183.5px;
+    top: 203.5px;
+    left: 24px;
+  }
+  .header__description__title {
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFF;
+    line-height: normal;
+  }
+  .header__description__text {
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 300;
+    color: #F7F3F2;
+    text-align: center;
+    line-height: 24.5px;
+    padding-bottom: 8px;
+  }
+  .header__description__button {
+    width: 280px;
+    height: 40px;
+    padding: 1px 4px 0 0;
+  }
+  .main {
+    width: 320px;
+  }
+  .how-works, .partners, .activities, .search {
+    width: 300px;
+    height: 781px;
+    margin: 36px auto 0;
+  }
+  .how-works__title, .partners__title, .activities__title, .search__title {
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 700;
+    color: #444;
+    line-height: 24px;
+  }
+  .how-works__description {
+    width: 300px;
+    height: 740px;
+    flex-direction: column;
+  }
+  .how-works__description__step1, .how-works__description__step2, .how-works__description__step3 {
+    width: 300px;
+    height: 240px;
+    background-image: url(../images/mobile/laptop-min.png);
+  }
+  .how-works__description__step1__mark, .how-works__description__step2__mark, .how-works__description__step3__mark {
+    bottom: 156px;
+    left: 20px;
+  }
+  .how-works__description__step1__title, .how-works__description__step2__title, .how-works__description__step3__title {
+    line-height: 14px;
+    bottom: 83px;
+    left: 20px;
+  }
+  .how-works__description__step1__text, .how-works__description__step2__text, .how-works__description__step3__text {
+    width: 250px;
+    height: 57px;
+    line-height: 14px;
+    bottom: 16px;
+    left: 20px;
+  }
+  .how-works__description__step2 {
+    background-image: url(../images/mobile/car-min.png);
+  }
+  .how-works__description__step2__mark {
+    bottom: 125px;
+  }
+  .how-works__description__step2__title {
+    width: 250px;
+    height: 29px;
+    bottom: 66px;
+  }
+  .how-works__description__step3 {
+    background-image: url(../images/mobile/beach-min.png);
+  }
+  .partners {
+    width: 300px;
+    height: 1031px;
+  }
+  .partners__title, .activities__title {
+    line-height: normal;
+  }
+  .partners__person-block {
+    width: 236px;
+    height: 887px;
+    margin: -24px auto 0;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .partners__person-block__person1, .partners__person-block__person2, .partners__person-block__person3, .partners__person-block__person4 {
+    width: 236px;
+    height: 205px;
+    margin-bottom: 16px;
+  }
+  .partners__person-block__person1__title, .partners__person-block__person2__title, .partners__person-block__person3__title, .partners__person-block__person4__title {
+    padding-top: 6px;
+  }
+  .partners__person-block__person1__text, .partners__person-block__person2__text, .partners__person-block__person3__text, .partners__person-block__person4__text {
+    width: 236px;
+    height: 38px;
+    padding-top: 11px;
+  }
+  .partners__person-block__person2 {
+    width: 236px;
+    height: 224px;
+    position: relative;
+  }
+  .partners__person-block__person2__face {
+    background-image: url(../images/face3-min.png);
+  }
+  .partners__person-block__person2__face__icon {
+    background-color: #FFA710;
+    background-image: url(../images/camera.svg);
+  }
+  .partners__person-block__person2__title {
+    visibility: hidden;
+  }
+  .partners__person-block__person2__title::before {
+    content: "Diana Wells";
+    visibility: visible;
+    position: absolute;
+    top: 140px;
+    left: 75px;
+  }
+  .partners__person-block__person2__text {
+    visibility: hidden;
+  }
+  .partners__person-block__person2__text::before {
+    content: "Living in Athens, Greece. I love black and white classics, chillout music and green tea.";
+    visibility: visible;
+    position: absolute;
+    bottom: 0px;
+  }
+  .partners__person-block__person3, .partners__person-block__person4 {
+    position: relative;
+  }
+  .partners__person-block__person3__face {
+    background-image: url(../images/face2-min.png);
+  }
+  .partners__person-block__person3__face__icon {
+    background-color: #19D4CA;
+    background-image: url(../images/brush.svg);
+  }
+  .partners__person-block__person3__title {
+    visibility: hidden;
+  }
+  .partners__person-block__person3__title::before {
+    content: "Marie Bennett";
+    visibility: visible;
+    position: absolute;
+    left: 66px;
+  }
+  .partners__person-block__person3__text, .partners__person-block__person4__text {
+    visibility: hidden;
+  }
+  .partners__person-block__person3__text::before, .partners__person-block__person4__text::before {
+    content: "Currently living in Colorado. Lover of art, languages and travelling.";
+    visibility: visible;
+  }
+  .partners__person-block__person4 {
+    margin-bottom: 0;
+  }
+  .partners__person-block__person4__text {
+    visibility: visible;
+  }
+  .partners__person-block__person4__text::before {
+    display: none;
+  }
+  .partners__button {
+    width: 280px;
+    height: 40px;
+    padding: 0 0 8px 6px;
+  }
+  .activities {
+    width: 300px;
+    height: 987px;
+  }
+  .activities__title {
+    width: 280px;
+    height: 54px;
+    margin: 0 auto;
+  }
+  .activities__block {
+    width: 300px;
+    height: 900px;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .activities__block__sports, .activities__block__health, .activities__block__extreme, .activities__block__games, .activities__block__culture, .activities__block__relax, .activities__block__travelling {
+    width: 300px;
+    height: 120px;
+    background-image: url(../images/mobile/sports-min.png);
+    margin-bottom: 10px;
+  }
+  .activities__block__sports__description, .activities__block__health__description, .activities__block__extreme__description, .activities__block__games__description, .activities__block__culture__description, .activities__block__relax__description, .activities__block__travelling__description {
+    width: 206px;
+    height: 54px;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 26px;
+  }
+  .activities__block__health {
+    background-image: url(../images/mobile/health-min.png);
+  }
+  .activities__block__health__description {
+    margin-bottom: 0;
+  }
+  .activities__block__extreme {
+    background-image: url(../images/mobile/extreme-min.png);
+  }
+  .activities__block__extreme__description {
+    width: 206px;
+    height: 54px;
+    margin-bottom: 0;
+  }
+  .activities__block__games {
+    background-image: url(../images/mobile/games-min.png);
+  }
+  .activities__block__games__description {
+    margin-top: 26px;
+    margin-bottom: 0;
+  }
+  .activities__block__culture, .activities__block__relax {
+    width: 300px;
+    height: 120px;
+    background-image: url(../images/mobile/culture-min.png);
+  }
+  .activities__block__culture__description {
+    width: 261px;
+    height: 27px;
+    margin-bottom: 0;
+  }
+  .activities__block__relax {
+    background-image: url(../images/mobile/relax-min.png);
+  }
+  .activities__block__relax__description {
+    width: 277px;
+    height: 27px;
+    margin-bottom: 0;
+  }
+  .activities__block__travelling {
+    margin-bottom: 0;
+    background-image: url(../images/mobile/trevelling-min.png);
+  }
+  .activities__block__travelling__description {
+    margin-top: 26px;
+    margin-bottom: 0;
+  }
+  .search {
+    width: 280px;
+    height: 192px;
+  }
+  .search__title {
+    padding-left: 0;
+  }
+  .search__text {
+    width: 280px;
+    height: 24px;
+    margin: 0 auto;
+    padding: 0 0 2px 4px;
+  }
+  .search__form {
+    width: 280px;
+    height: 90px;
+    margin-bottom: 2px;
+    flex-direction: column;
+  }
+  .search__form__input {
+    width: 280px;
+    height: 40px;
+  }
+  .search__form__button {
+    width: 280px;
+    height: 40px;
+    padding: 0 0 0 10px;
+  }
+  .footer {
+    width: 320px;
+    height: 226px;
+    margin: 38px auto 0;
+  }
+  .footer__title {
+    top: 21px;
+    left: 101px;
+  }
+  .footer__company, .footer__partners {
+    top: 54px;
+    left: 125px;
+  }
+  .footer__links {
+    width: 190px;
+    height: 52px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    top: 72px;
+    left: 65px;
+  }
+  .footer__partners {
+    top: 130px;
+    left: 127.5px;
+  }
+  .footer__designed-by {
+    top: 161px;
+    right: 117px;
+  }
+  .footer__image {
+    top: 178px;
+    right: 105px;
+  }
+}/*# sourceMappingURL=main.css.map */

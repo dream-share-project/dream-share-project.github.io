@@ -1,0 +1,10 @@
+@mixin size ($w, $h) {
+    width: $w;
+    height: $h;
+}
+@mixin font ($f-f, $f-s, $f-w, $c) {
+    font-family: $f-f;
+    font-size: $f-s;
+    font-weight: $f-w;
+    color: $c;
+}
